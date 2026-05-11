@@ -1,0 +1,64 @@
+<div class="item-search">
+  <h2>🔍 Buscar Item</h2>
+  <p class="subtitle">Encontre onde está um item específico</p>
+  
+  <div class="form">
+    <div class="form-group">
+      <label for="busca">O que você está procurando?</label>
+      <input 
+        id="busca"
+        type="text" 
+        [value]="termoBusca()"
+        (input)="termoBusca.set($any($event.target).value)"
+        (keyup.enter)="buscar()"
+        placeholder="Ex: carregador,mouse,cabo..."
+      />
+    </div>
+    
+    <button 
+      class="btn-buscar"
+      (click)="buscar()"
+      [disabled]="loading()"
+    >
+      {{ loading() ? 'Buscando...' : 'Buscar' }}
+    </button>
+  </div>
+  
+  @if (error()) {
+    <div class="error">{{ error() }}</div>
+  }
+  
+  @if (resultado()) {
+    @if (parsedResult()) {
+      <div class="resultado-formatado">
+        @if (parsedResult()!.encontrado) {
+          <div class="encontrado">
+            <div class="icon">✅</div>
+            <div class="content">
+              <h3>Item encontrado!</h3>
+              @if (parsedResult()!.caixa) {
+                <p class="caixa-numero">O item está na <strong>Caixa {{ parsedResult()!.caixa }}</strong></p>
+              }
+              @if (parsedResult()!.mensagem) {
+                <p class="mensagem">{{ parsedResult()!.mensagem }}</p>
+              }
+            </div>
+          </div>
+        } @else {
+          <div class="nao-encontrado">
+            <div class="icon">❓</div>
+            <div class="content">
+              <h3>Item não encontrado</h3>
+              <p>{{ parsedResult()!.mensagem || 'Tente buscar por outro termo ou adicione o item.' }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+      <div class="resultado">
+        <h3>Resultado:</h3>
+        <pre>{{ resultado() }}</pre>
+      </div>
+    }
+  }
+</div>

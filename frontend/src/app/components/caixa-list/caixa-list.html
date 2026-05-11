@@ -1,0 +1,44 @@
+<div class="caixa-list">
+  <h2>📦 Minhas Caixas</h2>
+  
+  @if (loading()) {
+    <div class="loading">Carregando...</div>
+  }
+  
+  @if (error()) {
+    <div class="error">{{ error() }}</div>
+  }
+  
+  @if (!loading() && !error()) {
+    <div class="caixas-grid">
+      @for (caixa of caixas(); track caixa.id) {
+        <div class="caixa-card" [class.expanded]="isExpanded(caixa.id)" (click)="toggleCaixa(caixa.id)">
+          <div class="caixa-header">
+            <span class="caixa-numero">Caixa {{ caixa.numero }}</span>
+            <span class="caixa-count">{{ caixa.itens.length }} itens</span>
+          </div>
+          
+          @if (caixa.descricao) {
+            <p class="caixa-desc">{{ caixa.descricao }}</p>
+          }
+          
+          @if (isExpanded(caixa.id) && caixa.itens.length > 0) {
+            <div class="caixa-itens">
+              <h4>Itens:</h4>
+              <ul>
+                @for (item of caixa.itens; track item.id) {
+                  <li>
+                    <span class="item-nome">{{ item.nome }}</span>
+                    @if (item.descricao) {
+                      <span class="item-desc">{{ item.descricao }}</span>
+                    }
+                  </li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  }
+</div>

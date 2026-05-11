@@ -1,0 +1,54 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+header {
+  background: #2e7d32;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .links {
+    display: flex;
+    gap: 16px;
+    
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 16px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: all 0.2s;
+      
+      &:hover {
+        color: white;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      
+      &.active {
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
