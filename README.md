@@ -2,45 +2,44 @@
 
 ## 🚀 May The Fourth 2026 - Desafio 2
 
-Oi, eu sou o [seu nome aqui] e este é o espaço onde compartilho minha jornada de aprendizado durante o desafio **May The Fourth 2026**, realizado pelo [balta.io](https://balta.io). 👻
+Desafio 2 do **May The Fourth 2026** realizado pelo [balta.io](https://balta.io).
 
-Aqui você vai encontrar projetos, exercícios e códigos que estou desenvolvendo durante o desafio.
+## **Meu repositório Central**
+
+https://github.com/b01tech/balta-desafio-may-the-fourth-2026.git
+
+---
 
 ### Sobre este desafio
+
 Você descreve o que colocou em cada caixa numerada; depois, basta perguntar à IA via / em qual caixa está o "carregador do notebook" para ela localizar no banco de dados.
 
-#### Nível 1 - Console Application
-- Projeto do tipo Console App simples
-- Separar os agentes em markdowns na pasta agentes
-- Criar os agentes (Arquivos .cs) separados
+#### Nível 3 - Fullstack + IA
 
-#### Nível 2 - API
-- Estruturar um projeto de IA
-  - Api, Ai, Core, Infra, Applicattion?
-- Expor um endpoint que recebe a entrada do usuário e retorna a receita
+- Estruturar projeto de IA completo
+- Expor endpoint que
 
-#### Nível 2 - Fullstack + IA
-- Estruturar um projeto de IA
-  - Api, Ai, Core, Infra, Applicattion?, Frontend (Blazor Wasm)
-- Expor um endpoint que recebe a entrada do usuário e retorna a receita
+## 🛠️ Stack
 
-Neste processo eu aprendi:
-* ✅ 
+- **Backend:** .NET 10, Minimal API, Entity Framework Core, SQLite
+- **Frontend:** Angular 21, Standalone Components, Signals
+- **IA:** OpenRouter API (modelos gratuitos), Microsoft Agent Framework
 
-## Bagde
-<img src="https://baltaio.blob.core.windows.net/static/images/v4/challenges/may-the-fourth-2026/rewards/moving/image.png" width="200" />
+## 📁 Estrutura do Projeto
 
-## Problema
---
+```
 
-## Sobre o ay The Fourth 2026
-O desafio **ay The Fourth 2026** consiste em implementar agentes e inteligência artificial em cenários reais, resolvendo problemas do dia-a-dia com Microsoft Agent Framework, C# e .NET.
 
-### Imersão - Microsoft Agents Framework
-https://www.youtube.com/watch?v=XkgjeBurtFw
+```
 
-### Curso - Microsoft Agents Framework
-https://balta.io/cursos/fundamentos-do-microsoft-agent-framework
+## 🚀 Como executar
 
-### Veja meu progresso no desafio
-[Incluir link para o repositório central]
+# Imagens
+
+## ✅ Funcionalidades
+
+## 🧪 Testes
+
+## 📝 Licença
+
+MIT License
